@@ -3,12 +3,13 @@ for(var i=0; i<=6; i++) {
         makeSound(this.innerHTML);
         buttonAnimation(this.innerHTML);
     });
-    document.addEventListener("keypress", function(event){
-        makeSound(event.key);
-        buttonAnimation(event.key);
-    });
+
 
 }
+document.addEventListener("keypress", function(event){
+    makeSound(event.key);
+    buttonAnimation(event.key);
+});
 
 function makeSound (key) {
     switch (key) {
@@ -50,5 +51,3 @@ function buttonAnimation(key) {
         document.querySelector("." + key).classList.remove("pressed");
         }, 100);
 }
-
- 
